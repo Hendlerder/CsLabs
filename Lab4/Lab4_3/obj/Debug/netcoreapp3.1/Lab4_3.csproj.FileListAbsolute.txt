@@ -1,0 +1,11 @@
+E:\Програмування\C# Programming\Lab4\Lab4_3\bin\Debug\netcoreapp3.1\Lab4_3.exe
+E:\Програмування\C# Programming\Lab4\Lab4_3\bin\Debug\netcoreapp3.1\Lab4_3.deps.json
+E:\Програмування\C# Programming\Lab4\Lab4_3\bin\Debug\netcoreapp3.1\Lab4_3.runtimeconfig.json
+E:\Програмування\C# Programming\Lab4\Lab4_3\bin\Debug\netcoreapp3.1\Lab4_3.runtimeconfig.dev.json
+E:\Програмування\C# Programming\Lab4\Lab4_3\bin\Debug\netcoreapp3.1\Lab4_3.dll
+E:\Програмування\C# Programming\Lab4\Lab4_3\bin\Debug\netcoreapp3.1\Lab4_3.pdb
+E:\Програмування\C# Programming\Lab4\Lab4_3\obj\Debug\netcoreapp3.1\Lab4_3.csprojAssemblyReference.cache
+E:\Програмування\C# Programming\Lab4\Lab4_3\obj\Debug\netcoreapp3.1\Lab4_3.AssemblyInfoInputs.cache
+E:\Програмування\C# Programming\Lab4\Lab4_3\obj\Debug\netcoreapp3.1\Lab4_3.AssemblyInfo.cs
+E:\Програмування\C# Programming\Lab4\Lab4_3\obj\Debug\netcoreapp3.1\Lab4_3.dll
+E:\Програмування\C# Programming\Lab4\Lab4_3\obj\Debug\netcoreapp3.1\Lab4_3.pdb
