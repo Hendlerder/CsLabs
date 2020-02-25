@@ -9,8 +9,7 @@ namespace _4_4
     {
         static void Main(string[] args)
         {
-
-            double e = Math.E;
+            
             Console.Write("x = ");
             double x = Convert.ToDouble(Console.ReadLine());
             Console.Write("y = ");
@@ -18,7 +17,7 @@ namespace _4_4
 
             if (x > y)
             {
-                double z = y * Math.Pow(e, x);
+                double z = y * Math.Pow(Math.E, x);
                 Console.WriteLine("Z = {0}, if x > y.", z);
             }
             else if (x == y)
@@ -28,7 +27,7 @@ namespace _4_4
             }
             else
             {
-                double z = x * Math.Pow(x, e);
+                double z = x * Math.Pow(x, Math.E);
                 Console.WriteLine("Z = {0}, if x < y.", z);
             }
             Console.ReadKey();
