@@ -1,0 +1,21 @@
+﻿using System;
+
+namespace Lab8_3
+{
+    class Program
+    {
+        static int Recursion(int i)
+        {
+            if (i == 0 || i == 1)
+                return 1;
+            else
+                return Recursion(i - 1) + Recursion(i - 2);
+        }
+
+        static void Main(string[] args)
+        {
+            Console.Write("i = "); int i = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"X{i} = {Recursion(i)}");
+        }
+    }
+}
