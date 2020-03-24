@@ -15,10 +15,15 @@ namespace Lab8_2
         {
             int result = 0;
 
-            int[] maln = new int[3];
-            Console.Write("Main line Ax = "); maln[0] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Main line By = "); maln[1] = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Main line C = "); maln[2] = Convert.ToInt32(Console.ReadLine());
+            int[] Maln = new int[3];
+            Console.Write("First MAIN line Ax = "); Maln[0] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("First MAIN line By = "); Maln[1] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("First MAIN line C = "); Maln[2] = Convert.ToInt32(Console.ReadLine());
+            
+            int[] malN = new int[3];
+            Console.Write("Second MAIN line Ax = "); malN[0] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Second MAIN line By = "); malN[1] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Second MAIN line C = "); malN[2] = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("The nubmer of lines which are between two MAIN lines = "); int numb = Convert.ToInt32(Console.ReadLine());
 
@@ -28,7 +33,16 @@ namespace Lab8_2
                 Console.Write("Line №{0} Ax = ", i); line[0] = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Line №{0} Bx = ", i); line[1] = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Line №{0} C = ", i); line[2] = Convert.ToInt32(Console.ReadLine());
-                if (Parallel(maln, line) == 1) { result++; }
+                if (Parallel(Maln, line) == 1) { result++; }
+            }
+            
+            for (int j = 1; j <= numb; j++)
+            {
+                int[] line = new int[3];
+                Console.Write("Line №{0} Ax = ", j); line[0] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Line №{0} Bx = ", j); line[1] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Line №{0} C = ", j); line[2] = Convert.ToInt32(Console.ReadLine());
+                if (Parallel(malN, line) == 1) { result++; }
             }
             Console.WriteLine("The number of mutually parallel pairs of lines which are between two main lines = {0}", result);
         }
