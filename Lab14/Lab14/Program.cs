@@ -125,33 +125,35 @@ namespace Lab14
             {
                 Console.Write("Enter the amount of figures: "); int n = Convert.ToInt32(Console.ReadLine());
 
-                Body[] figures = new Body[n]; Random rnd = new Random(DateTime.Now.Millisecond);
+                Body[] I = new Body[n]; Random rnd = new Random(DateTime.Now.Millisecond);
+                Body[] II = new Body[n]; Random rnd = new Random(DateTime.Now.Millisecond);
 
                 for (int i = 0; i < figures.Length; i++)
                 {
                     switch (rnd.Next(1, 4))
                     {
                         case 1:
-                            figures[i] = new RightTriangle(rnd.Next(1, 10), rnd.Next(1, 10), rnd.Next(1, 10));
+                            I[i] = new RightTriangle(rnd.Next(1, 10), rnd.Next(1, 10), rnd.Next(1, 10));
                             break;
                         case 2:
-                            figures[i] = new EquilateralTriangle(rnd.Next(1, 10), rnd.Next(1, 10));
+                            I[i] = new EquilateralTriangle(rnd.Next(1, 10), rnd.Next(1, 10));
                             break;
                         case 3:
-                            figures[i] = new IsoscelesTriangle(rnd.Next(1, 10), rnd.Next(1, 10), rnd.Next(1, 10));
+                            II[i] = new IsoscelesTriangle(rnd.Next(1, 10), rnd.Next(1, 10), rnd.Next(1, 10));
                             break;
                     }
                 }
-                for (int i = 0; i < figures.Length; i++) { Console.WriteLine(figures[i]); }
+                for (int i = 0; i < I.Length; i++) { Console.WriteLine(I[i]); }
+                for (int i = 0; i < II.Length; i++) { Console.WriteLine(II[i]); }
 
                 double res = 0;
-                for (int i = 0; i < figures.Length; i++) { res += figures[i].Perimetr(); }
+                for (int i = 0; i < I.Length; i++) { res += I[i].Area(); }
                 double ult = 0;
-                for (int i = 0; i < figures.Length; i++) { ult += figures[i].Area(); }
+                for (int i = 0; i < II.Length; i++) { ult += II[i].Perimetr(); }
                 Console.WriteLine(" ");
-                Console.WriteLine($"Sum of areas = {res}");
+                Console.WriteLine($"Sum of RightTriangles and EquilateralTriangles areas = {res}");
                 Console.WriteLine(" ");
-                Console.WriteLine($"Sum of perimeters = {ult}");
+                Console.WriteLine($"Sum of IsoscelesTriangles perimeters = {ult}");
             }
             catch { Console.WriteLine("Cannot be negative"); }
         }
