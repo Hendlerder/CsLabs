@@ -1,0 +1,13 @@
+E:\Програмування\C# Programming\Lab14\Lab14\bin\Debug\netcoreapp3.1\Lab14.exe
+E:\Програмування\C# Programming\Lab14\Lab14\bin\Debug\netcoreapp3.1\Lab14.deps.json
+E:\Програмування\C# Programming\Lab14\Lab14\bin\Debug\netcoreapp3.1\Lab14.runtimeconfig.json
+E:\Програмування\C# Programming\Lab14\Lab14\bin\Debug\netcoreapp3.1\Lab14.runtimeconfig.dev.json
+E:\Програмування\C# Programming\Lab14\Lab14\bin\Debug\netcoreapp3.1\Lab14.dll
+E:\Програмування\C# Programming\Lab14\Lab14\bin\Debug\netcoreapp3.1\Lab14.pdb
+E:\Програмування\C# Programming\Lab14\Lab14\obj\Debug\netcoreapp3.1\Lab14.csprojAssemblyReference.cache
+E:\Програмування\C# Programming\Lab14\Lab14\obj\Debug\netcoreapp3.1\Lab14.csproj.CoreCompileInputs.cache
+E:\Програмування\C# Programming\Lab14\Lab14\obj\Debug\netcoreapp3.1\Lab14.AssemblyInfoInputs.cache
+E:\Програмування\C# Programming\Lab14\Lab14\obj\Debug\netcoreapp3.1\Lab14.AssemblyInfo.cs
+E:\Програмування\C# Programming\Lab14\Lab14\obj\Debug\netcoreapp3.1\Lab14.dll
+E:\Програмування\C# Programming\Lab14\Lab14\obj\Debug\netcoreapp3.1\Lab14.pdb
+E:\Програмування\C# Programming\Lab14\Lab14\obj\Debug\netcoreapp3.1\Lab14.genruntimeconfig.cache
