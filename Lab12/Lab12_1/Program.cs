@@ -1,92 +1,72 @@
-﻿using System;
+using System;
 
 namespace Lab12_1
 {
+    class Cathetus
+    {
+        public double Lenght { get; set; }
+    }
+    class TPTriangle
+    {
+        public Cathetus[] inf;
+        public TPTriangle(double v1, double v2) { inf = new Cathetus[2]; }
+        public Cathetus this[int index]
+        {
+            get { return inf[index]; }
+            set { inf[index] = value; }
+        }
+        public Cathetus this[double lenght]
+        {
+            get
+            {
+                Cathetus cathetus = null;
+                return cathetus;
+            }
+        }
+        public double Area() { return inf[0].Lenght * inf[1].Lenght / 2; }
+        public double Perimeter() { return inf[0].Lenght + inf[1].Lenght + Math.Pow(Math.Pow(inf[0].Lenght, 2) + Math.Pow(inf[1].Lenght, 2), 0.5); }
+        public static bool operator ==(TPTriangle tr1, TPTriangle tr2) { return tr1.inf[0].Lenght == tr2.inf[0].Lenght && tr1.inf[1].Lenght == tr2.inf[1].Lenght; }
+
+        public static bool operator !=(TPTriangle tr1, TPTriangle tr2) { return tr1.inf[0].Lenght != tr2.inf[0].Lenght && tr1.inf[1].Lenght != tr2.inf[1].Lenght; }
+
+        public static TPTriangle operator +(TPTriangle TPTriangle, double num) { return new TPTriangle(TPTriangle.inf[0].Lenght + num, TPTriangle.inf[1].Lenght + num); }
+
+        public static TPTriangle operator -(TPTriangle TPTriangle, double num) { return new TPTriangle(TPTriangle.inf[0].Lenght - num, TPTriangle.inf[1].Lenght - num); }
+
+        public static TPTriangle operator *(TPTriangle TPTriangle, double num) { return new TPTriangle(TPTriangle.inf[0].Lenght * num, TPTriangle.inf[1].Lenght * num); }
+    }
     class Program
     {
-        class TPTriangle
-        {
-            private double I;
-            private double II;
-
-            public double A
-            {
-                get { return I; }
-                set
-                {
-                    if (value < 0) throw new Exception("Cathetus must be positive number!!!");
-                    I = value;
-                }
-            }
-
-            public double B
-            {
-                get { return II; }
-                set
-                {
-                    if (value < 0) throw new Exception("Cathetus must be positive number!!!");
-                    II = value;
-                }
-            }
-
-            public TPTriangle(double prinI, double prinII)
-            {
-                A = prinI;
-                B = prinII;
-            }
-
-            public override string ToString() { return $"a = {I}, b = {II}"; }
-
-            public TPTriangle(TPTriangle previousTPTriangle)
-            {
-                A = previousTPTriangle.I;
-                B = previousTPTriangle.II;
-            }
-
-            public double Area() { return I * II / 2; }
-
-            public double Perimeter() { return I + II + Math.Pow(Math.Pow(I, 2) + Math.Pow(II, 2), 1 / 2); }
-
-            public static bool operator ==(TPTriangle tr1, TPTriangle tr2) { return tr1.I == tr2.I && tr1.II == tr2.II; }
-
-            public static bool operator !=(TPTriangle tr1, TPTriangle tr2) { return tr1.I != tr2.I && tr1.II != tr2.II; }
-
-            public static TPTriangle operator +(TPTriangle TPTriangle, double num) { return new TPTriangle(TPTriangle.I + num, TPTriangle.II + num); }
-
-            public static TPTriangle operator -(TPTriangle TPTriangle, double num) { return new TPTriangle(TPTriangle.I - num, TPTriangle.II - num); }
-
-            public static TPTriangle operator *(TPTriangle TPTriangle, double num) { return new TPTriangle(TPTriangle.I * num, TPTriangle.II * num); }
-        }
         static void Main(string[] args)
         {
-            try
-            {
-                Console.Write("x[1] = "); double x1 = Convert.ToDouble(Console.ReadLine());
-                Console.Write("x[2] = "); double x2 = Convert.ToDouble(Console.ReadLine());
-                Console.Write("y[1] = "); double y1 = Convert.ToDouble(Console.ReadLine());
-                Console.Write("y[2] = "); double y2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("First cathetus of the TPTriangle №1 = "); double x1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Second cathetus of the TPTriangle №1= "); double y1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("First cathetus of the TPTriangle №2 = "); double x2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Second cathetus of the TPTriangle №2= "); double y2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter some number: "); double num = Convert.ToDouble(Console.ReadLine());
 
-                TPTriangle tr1 = new TPTriangle(x1, y1);
-                TPTriangle tr2 = new TPTriangle(x2, y2);
+            TPTriangle tr1 = new TPTriangle(x1, y1);
+            tr1[0] = new Cathetus { Lenght = x1 };
+            tr1[1] = new Cathetus { Lenght = y1 };
+            TPTriangle tr2 = new TPTriangle(x2, y2);
+            tr2[0] = new Cathetus { Lenght = x2 };
+            tr2[1] = new Cathetus { Lenght = y2 };
 
-                Console.Write("Enter some number: "); double num = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("");
+            Console.WriteLine("Test:");
+            Console.WriteLine("First cathetus of the TPTriangle №1 = {0}", tr1[0].Lenght);
+            Console.WriteLine("Second cathetus of the TPTriangle №1 = {0}", tr1[1].Lenght);
+            Console.WriteLine("First cathetus of the TPTriangle №2 = {0}", tr2[0].Lenght);
+            Console.WriteLine("Second cathetus of the TPTriangle №2 = {0}", tr2[1].Lenght);
+            Console.WriteLine("");
 
-                Console.WriteLine($"Area = {tr1.Area()}");
+            Console.WriteLine("Answers:");
+            Console.WriteLine($"Area = {tr1.Area()}");
+            Console.WriteLine($"Perimeter = {tr1.Perimeter()}");
+            if (tr1 == tr2) Console.WriteLine("TPTriangles are equals.");
+            else Console.WriteLine("TPTriangles are'nt equals.");
 
-                Console.WriteLine($"Perimeter = {tr1.Perimeter()}");
-
-                if (tr1 == tr2) Console.WriteLine("TPTriangles are equals.");
-                else Console.WriteLine("TPTriangles are'nt equals.");
-
-                Console.WriteLine($"Summed {num}: {tr1 + num}");
-
-                Console.WriteLine($"Subtracted {num}: {tr1 - num}");
-
-                Console.WriteLine($"Multiplied {num}: {tr1 * num}");
-
-                TPTriangle copie = new TPTriangle(tr2); Console.WriteLine(copie);
-            }
-            catch { Console.WriteLine("Cathetus of TPTriangle must be positive!!!"); }
+            Console.ReadKey();
         }
     }
 }
