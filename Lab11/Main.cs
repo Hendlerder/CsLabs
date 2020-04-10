@@ -61,10 +61,10 @@ namespace Main
         {
             try
             {
-                Console.WriteLine("x[1] = "); double x1 = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("x[2] = "); double x2 = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("y[1] = "); double y1 = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("y[2] = "); double y2 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("x[1] = "); double x1 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("x[2] = "); double x2 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("y[1] = "); double y1 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("y[2] = "); double y2 = Convert.ToDouble(Console.ReadLine());
 
                 TPTriangle tr1 = new TPTriangle(x1, y1);
                 TPTriangle tr2 = new TPTriangle(x2, y2);
