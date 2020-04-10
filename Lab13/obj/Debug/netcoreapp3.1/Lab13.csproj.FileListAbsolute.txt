@@ -1,0 +1,13 @@
+D:\Програмування\Lab13\bin\Debug\netcoreapp3.1\Lab13.exe
+D:\Програмування\Lab13\bin\Debug\netcoreapp3.1\Lab13.deps.json
+D:\Програмування\Lab13\bin\Debug\netcoreapp3.1\Lab13.runtimeconfig.json
+D:\Програмування\Lab13\bin\Debug\netcoreapp3.1\Lab13.runtimeconfig.dev.json
+D:\Програмування\Lab13\bin\Debug\netcoreapp3.1\Lab13.dll
+D:\Програмування\Lab13\bin\Debug\netcoreapp3.1\Lab13.pdb
+D:\Програмування\Lab13\obj\Debug\netcoreapp3.1\Lab13.csprojAssemblyReference.cache
+D:\Програмування\Lab13\obj\Debug\netcoreapp3.1\Lab13.csproj.CoreCompileInputs.cache
+D:\Програмування\Lab13\obj\Debug\netcoreapp3.1\Lab13.AssemblyInfoInputs.cache
+D:\Програмування\Lab13\obj\Debug\netcoreapp3.1\Lab13.AssemblyInfo.cs
+D:\Програмування\Lab13\obj\Debug\netcoreapp3.1\Lab13.dll
+D:\Програмування\Lab13\obj\Debug\netcoreapp3.1\Lab13.pdb
+D:\Програмування\Lab13\obj\Debug\netcoreapp3.1\Lab13.genruntimeconfig.cache
