@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Main
 {
@@ -14,7 +14,7 @@ namespace Main
                 get { return num; }
                 set
                 {
-                    if(0 > 0) throw new Exception("It must be Float Number !");
+                    if (num == 0) throw new Exception("It must be Float Number !");
                     num = value;
                 }
             }
@@ -26,21 +26,20 @@ namespace Main
                     if (num == 0) throw new Exception("It must be Float Number !");
                     num = value;
                 }
-
             }
-        static void Main(string[] args)
-        {
-            try
+            static void Main(string[] args)
             {
-                Console.Write("Float Number = "); double origin = Convert.ToDouble(Console.ReadLine());
-                double num = origin;
+                try
+                {
+                    Console.Write("Float Number = "); double origin = Convert.ToDouble(Console.ReadLine());
+                    double num = 0;
+                    double ber = origin;
 
-                if(num > 0)
-                    {
-                        while(num < 0) { i++; }
-                    }
+                    if (ber > 0) while (ber >= 1) { ber--; num++; }
+                    else while (ber <= -1) { ber++; num--; }
+                }
+                catch { Console.WriteLine("It must be Float Number !"); }
             }
-            catch { Console.WriteLine("It must be Float Number !"); }
         }
     }
 }
