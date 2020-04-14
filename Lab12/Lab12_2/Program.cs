@@ -14,7 +14,7 @@ namespace Main
                 get { return num; }
                 set
                 {
-                    if (num == 0) throw new Exception("It must be Float Number !");
+                    if (num != 0) throw new Exception("It must be Float Number !");
                     num = value;
                 }
             }
